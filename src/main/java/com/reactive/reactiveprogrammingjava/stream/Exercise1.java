@@ -21,7 +21,7 @@ public class Exercise1 {
 
 
         //  Print the first number in intNumbersStream that's greater than 5.
-        System.out.println(numbers.stream().filter(number -> number > 5).findFirst().get());
+        System.out.println(numbers.stream().filter(number -> number > 5).findFirst().orElse(-1));
 
     }
 }
