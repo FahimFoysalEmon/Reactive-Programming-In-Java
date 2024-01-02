@@ -19,5 +19,9 @@ public class Exercise1 {
                 .limit(2)
                 .forEach(System.out::println);
 
+
+        //  Print the first number in intNumbersStream that's greater than 5.
+        System.out.println(numbers.stream().filter(number -> number > 5).findFirst().get());
+
     }
 }
