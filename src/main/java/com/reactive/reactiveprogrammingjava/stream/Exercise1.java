@@ -47,18 +47,11 @@ public class Exercise1 {
 
 
         // Print first names in userStream for users that have IDs from number stream
-//        StreamSources.userStream().forEach(user -> {
-//            System.out.println(user.getFirstName());
-//        });
 
-
-        StreamSources.intNumbersStream()
-                .flatMap(id -> StreamSources.userStream()
-                        .filter(user -> user.getId() == id)
-                        .map(User::getFirstName))
-                .forEach(System.out::println);
-
-
+        System.out.println("----------");
+        StreamSources.userStream()
+                .filter(u -> StreamSources.intNumbersStream().anyMatch(id -> u.getId() == id))
+                .forEach(user -> System.out.println(user.getFirstName()));
 
 
 
