@@ -1,15 +1,11 @@
 package com.reactive.reactiveprogrammingjava.stream;
 
-import com.reactive.reactiveprogrammingjava.commons.ReactiveSources;
 import com.reactive.reactiveprogrammingjava.commons.StreamSources;
 import com.reactive.reactiveprogrammingjava.commons.User;
-import org.hibernate.annotations.CurrentTimestamp;
 
 import java.time.LocalDateTime;
-import java.util.Arrays;
-import java.util.List;
 
-public class Exercise1 {
+public class ExerciseStream {
     public static void main(String[] args) {
 //        List<Integer> numbers = Arrays.asList(1,2,3,4,5,6,7,8,9,10);
 
@@ -49,6 +45,7 @@ public class Exercise1 {
         // Print first names in userStream for users that have IDs from number stream
 
         System.out.println("----------");
+
         StreamSources.userStream()
                 .filter(u -> StreamSources.intNumbersStream().anyMatch(id -> u.getId() == id))
                 .forEach(user -> System.out.println(user.getFirstName()));
