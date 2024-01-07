@@ -18,7 +18,7 @@ public class ExerciseFluxAndMono {
         // Print all users in the ReactiveSources.userFlux stream
         ReactiveSources.userFlux().subscribe(System.out::println);
 
-        System.out.println("Press a key to end");
+        System.out.println("Press a key to end\n");
         System.in.read();
 
     }
