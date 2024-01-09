@@ -10,7 +10,6 @@ public class ExerciseFluxAndMono {
 
         // Use ReactiveSources.intNumbersFlux() and ReactiveSources.userFlux()
 
-
         // Print all numbers in the ReactiveSources.intNumbersFlux stream
         ReactiveSources.intNumbersFlux().subscribe(System.out::println);
 
@@ -18,8 +17,13 @@ public class ExerciseFluxAndMono {
         // Print all users in the ReactiveSources.userFlux stream
         ReactiveSources.userFlux().subscribe(System.out::println);
 
+
+        //subscribe() executes as soon as the print line happens! without an action subscribe will not happen
+
         System.out.println("Press a key to end\n");
         System.in.read();
+
+
 
     }
 
