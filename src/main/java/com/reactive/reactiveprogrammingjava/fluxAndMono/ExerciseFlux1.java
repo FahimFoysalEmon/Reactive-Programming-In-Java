@@ -4,7 +4,7 @@ import com.reactive.reactiveprogrammingjava.commons.ReactiveSources;
 
 import java.io.IOException;
 
-public class ExerciseFluxAndMono1 {
+public class ExerciseFlux1 {
 
     public static void main(String[] args) throws IOException {
 

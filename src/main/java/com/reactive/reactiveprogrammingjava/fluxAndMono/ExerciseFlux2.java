@@ -4,7 +4,7 @@ import com.reactive.reactiveprogrammingjava.commons.ReactiveSources;
 
 import java.util.List;
 
-public class ExerciseFluxAndMono2 {
+public class ExerciseFlux2 {
 
     public static void main(String[] args) {
         // Use ReactiveSources.intNumbersFlux()
@@ -15,6 +15,7 @@ public class ExerciseFluxAndMono2 {
         List<Integer> list = ReactiveSources.intNumbersFlux().toStream().toList();
         System.out.println("List is -> "+ list);
         System.out.println("Size of List is -> "+ list.size());
+
 
 
 
